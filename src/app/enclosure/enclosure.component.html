@@ -1,0 +1,7 @@
+<div 
+  class="enclosure"
+  [ngClass]="{'electrified': catArray.length > 0}" >
+  <div *ngFor="let cat of catArray">
+    {{ cat.species }}
+  </div>
+</div>

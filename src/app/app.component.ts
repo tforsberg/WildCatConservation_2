@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cat } from './interfaces';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'WildCat Conservation';
+
+  cat: Cat;
+
+  buttonArray: string[];
+
+  constructor() {
+    this.buttonArray = [
+      'pallas',
+      'iriomote',
+      'kodkod'
+    ];
+  }
+
+  addCat(species: string) {
+    this.cat = {
+      species: species,
+      isHealthy: true
+    };
+
+  }
 }

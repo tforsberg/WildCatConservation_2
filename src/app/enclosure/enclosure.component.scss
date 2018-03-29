@@ -1,0 +1,12 @@
+.enclosure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  min-width: 500px;
+  border: solid 5px green;
+}
+
+.electrified {
+  border: solid 5px orange;
+}
