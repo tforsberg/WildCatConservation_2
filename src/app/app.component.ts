@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Cat } from './interfaces';
+import { CatService } from './cat.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,9 @@ import { Cat } from './interfaces';
 export class AppComponent {
   title = 'WildCat Conservation';
 
-  cat: Cat;
-
   buttonArray: string[];
 
-  constructor() {
+  constructor(private catService: CatService) {
     this.buttonArray = [
       'pallas',
       'iriomote',
@@ -22,10 +20,7 @@ export class AppComponent {
   }
 
   addCat(species: string) {
-    this.cat = {
-      species: species,
-      isHealthy: true
-    };
-
+   this.catService.createCat(species);
   }
+
 }

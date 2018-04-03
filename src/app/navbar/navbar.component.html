@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Wildcat Conservation</span>
+    <span class="navbar-spacer"></span>
+    <button 
+      *ngFor="let route of routeArray" 
+      mat-button 
+      (click)="navigate(route.path)">
+      {{ route.path | uppercase }}
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

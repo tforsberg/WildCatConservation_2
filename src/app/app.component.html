@@ -1,19 +1,13 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<app-navbar></app-navbar>
+
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
   <div class="button-container">
-    <button 
+    <button mat-button color="primary"
       *ngFor="let btn of buttonArray"
       (click)="addCat(btn)"
       >
       Add {{ btn }} cat
     </button>
   </div>
-
-
-  <app-enclosure [catFromParent]="cat"></app-enclosure>
-
-
+  <router-outlet></router-outlet>
 </div>

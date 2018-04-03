@@ -1,7 +1,8 @@
-<div 
+<div *ngIf=" $catsObservable | async as cats"
   class="enclosure"
-  [ngClass]="{'electrified': catArray.length > 0}" >
-  <div *ngFor="let cat of catArray">
+  [ngClass]="{'electrified': cats.length > 0}"
+  [ngStyle]="{'background-color': getBackgroundColor(habitat)}" >
+  <div *ngFor="let cat of cats">
     {{ cat.species }}
   </div>
 </div>

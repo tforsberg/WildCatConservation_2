@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+// color-theme for angular material
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 body {
   font-family: 'Segoe UI';
 }
